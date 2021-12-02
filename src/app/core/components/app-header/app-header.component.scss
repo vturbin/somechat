@@ -1,0 +1,31 @@
+@use "../../../styles/colors.scss" as colors;
+@use "../../../styles/variables.scss" as variables;
+
+#app-header {
+  width: 100%;
+  height: variables.$header-height;
+  display: inline-flex;
+  justify-content: flex-end;
+
+  ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    li {
+      color: colors.$text-color;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 1rem;
+
+      &:last-child {
+        padding-right: 10rem;
+      }
+
+      &:hover {
+        text-decoration-line: underline;
+        text-underline-offset: 0.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+}

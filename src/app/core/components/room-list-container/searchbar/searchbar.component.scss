@@ -1,0 +1,20 @@
+@use "../../../../styles/colors" as colors;
+@use "../../../../styles/variables" as variables;
+
+@import "../../../../styles/mixins";
+
+.p-inputtext {
+  border-radius: 1.5rem;
+  background: colors.$primary-color;
+  opacity: 1;
+  border: none;
+  padding-left: 2rem;
+  width: 100%;
+  height: variables.$searchbar-height;
+  @include component-box-shadow;
+}
+
+.p-input-icon-left,
+.p-input-icon-right {
+  width: 100%;
+}

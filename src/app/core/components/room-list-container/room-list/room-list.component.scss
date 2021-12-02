@@ -1,0 +1,15 @@
+@use "../../../../styles/variables.scss" as variables;
+@use "../../../../styles/colors.scss" as colors;
+
+@import "../../../../styles/mixins";
+
+#room-list {
+  margin-top: 1rem;
+  border-radius: 1.5rem;
+  background: colors.$primary-color;
+  width: 100%;
+  height: calc(
+    #{variables.$roomlist-height} - #{variables.$searchbar-height} - 0.5rem
+  );
+  @include component-box-shadow;
+}

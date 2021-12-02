@@ -1,0 +1,4 @@
+$header-height: 3rem;
+$searchbar-height: 3rem;
+$roomlist-container-height: calc(100vh - #{$header-height} - 1rem);
+$roomlist-height: calc(#{$roomlist-container-height} - 1rem);

@@ -1,0 +1,6 @@
+@use "../../../styles/variables" as variables;
+
+#chat-header {
+  background: #161616;
+  height: variables.$searchbar-height;
+}
