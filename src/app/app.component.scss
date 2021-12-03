@@ -6,13 +6,10 @@
   flex-direction: row;
 }
 
-#room-list-layout {
-  flex-grow: 1;
-}
-
 #chat-container {
   flex-grow: 6;
   border-radius: 1.5rem;
+  min-width: 20rem;
   margin: 1rem 1rem 0rem 1rem;
   background: colors.$primary-color;
   overflow: hidden;

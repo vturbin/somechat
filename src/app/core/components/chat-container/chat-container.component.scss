@@ -1,6 +1,38 @@
 @use "../../../styles/variables" as variables;
+@use "../../../styles/colors" as colors;
+@import "../../../styles/mixins";
 
 #chat-header {
   background: #161616;
   height: variables.$searchbar-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+
+.summary-block {
+  height: 70%;
+  display: flex;
+  align-items: center;
+
+  &__image-placeholder {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: transparent;
+    object-fit: §;
+    overflow: hidden;
+
+    > img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  }
+
+  &__title {
+    padding-left: 1rem;
+  }
 }

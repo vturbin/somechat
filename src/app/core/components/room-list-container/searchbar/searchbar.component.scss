@@ -11,6 +11,7 @@
   padding-left: 2rem;
   width: 100%;
   height: variables.$searchbar-height;
+  color: colors.$text-color;
   @include component-box-shadow;
 }
 
