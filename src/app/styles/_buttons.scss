@@ -1,0 +1,26 @@
+@use "./colors" as colors;
+@import "./mixins";
+
+div {
+  .p-button {
+    color: colors.$text-color;
+    background: colors.$background-color;
+    border: 1px solid colors.$background-color;
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
+    border-radius: 0px;
+    @include button-mixin;
+
+    // &:enabled:hover {
+    //   background: colors.$chat-header;
+    //   color: colors.$text-color;
+    //   border-color: colors.$background-color;
+    // }
+
+    &--critical {
+      color: colors.$text-critical;
+    }
+  }
+}

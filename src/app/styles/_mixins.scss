@@ -1,3 +1,18 @@
+@use "./colors" as colors;
+
 @mixin component-box-shadow {
   box-shadow: 5px 5px 10px 4px rgba(7, 7, 7, 0.8);
+}
+
+@mixin separation-line {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid colors.$primary-color;
+}
+
+@mixin button-mixin {
+  border: 1px solid colors.$text-color;
+  height: 2rem;
+  width: 100%;
+  color: colors.$text-color;
+  background: colors.$background-color;
 }

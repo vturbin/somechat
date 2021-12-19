@@ -1,0 +1,62 @@
+@use "../../../styles/colors" as colors;
+@import "../../../styles/mixins";
+
+#chat-info-container {
+  width: 20rem;
+
+  a {
+    font-size: 0.75rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  &-summary {
+    display: flex;
+    flex-direction: row;
+    @include separation-line;
+
+    &__general {
+      padding-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__image {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background-color: transparent;
+      overflow: hidden;
+
+      > img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+    }
+  }
+
+  &-about {
+    @include separation-line;
+
+    h5 {
+      padding: 0.5rem 0;
+    }
+  }
+
+  &-action-buttons {
+    padding-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  p,
+  h5 {
+    display: block;
+  }
+}

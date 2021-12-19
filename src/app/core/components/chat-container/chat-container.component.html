@@ -1,5 +1,5 @@
 <div id="chat-header">
-  <div class="summary-block">
+  <div class="summary-block" (click)="groupInfoOverlay.toggleOverlay($event)">
     <div class="summary-block__image-placeholder">
       <img src="../../../../assets/covid.jpeg" alt="room-image" />
     </div>
@@ -10,4 +10,4 @@
     <h4 class="summary-block__title">10.5K</h4>
   </div>
 </div>
- 
+ <app-group-information #groupInfoOverlay></app-group-information>

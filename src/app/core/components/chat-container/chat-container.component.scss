@@ -3,7 +3,7 @@
 @import "../../../styles/mixins";
 
 #chat-header {
-  background: #161616;
+  background: colors.$chat-header;
   height: variables.$searchbar-height;
   display: flex;
   align-items: center;
@@ -15,6 +15,7 @@
   height: 70%;
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   img {
     user-drag: none;
@@ -26,7 +27,6 @@
     height: 2rem;
     border-radius: 50%;
     background-color: transparent;
-    object-fit: §;
     overflow: hidden;
 
     > img {
@@ -39,6 +39,5 @@
 
   &__title {
     padding-left: 1rem;
-    cursor: default;
   }
 }

@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @use "./app/styles/colors" as colors;
 @import "./app/styles/fonts";
+@import "./app/styles/overlayPanel";
+@import "./app/styles/buttons";
 
 html,
 body {

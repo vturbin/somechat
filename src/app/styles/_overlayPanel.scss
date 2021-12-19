@@ -1,0 +1,14 @@
+@use "./colors" as colors;
+
+div {
+  &.p-overlaypanel {
+    background-color: colors.$chat-header;
+    border: none;
+    margin-top: 5px;
+
+    &:before,
+    &:after {
+      border: none;
+    }
+  }
+}

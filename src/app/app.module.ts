@@ -13,6 +13,9 @@ import { SearchbarComponent } from './core/components/room-list-container/search
 import { RoomListComponent } from './core/components/room-list-container/room-list/room-list.component';
 import { RoomListContainerComponent } from './core/components/room-list-container/room-list-container.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { GroupInformationComponent } from './core/components/group-information/group-information.component';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SearchbarComponent,
     RoomListComponent,
     RoomListContainerComponent,
+    GroupInformationComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     InputTextModule,
     BrowserModule,
     BrowserAnimationsModule,
+    OverlayPanelModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
