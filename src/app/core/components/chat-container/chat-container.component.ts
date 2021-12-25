@@ -1,11 +1,4 @@
-import {
-  Component,
-  Input,
-  OnInit,
-  TemplateRef,
-  ViewChild,
-} from '@angular/core';
-import { OverlayPanel } from 'primeng/overlaypanel';
+import { Component, ViewChild } from '@angular/core';
 import { GroupInformationComponent } from '../group-information/group-information.component';
 
 @Component({
@@ -16,4 +9,5 @@ import { GroupInformationComponent } from '../group-information/group-informatio
 export class ChatContainerComponent {
   @ViewChild('groupInfoOverlay')
   public groupInfoOverlay: GroupInformationComponent;
+  public membersSidebar = true;
 }

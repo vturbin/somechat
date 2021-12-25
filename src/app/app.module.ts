@@ -16,6 +16,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { GroupInformationComponent } from './core/components/group-information/group-information.component';
 import { ButtonModule } from 'primeng/button';
+import { SidebarModule } from 'primeng/sidebar';
+import { ChatGroupMembersComponent } from './core/components/chat-container/group-members-sidebar/group-members-sidebar.component';
+import { GroupMemberComponent } from './core/components/chat-container/group-members-sidebar/group-member/group-member.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,8 @@ import { ButtonModule } from 'primeng/button';
     RoomListComponent,
     RoomListContainerComponent,
     GroupInformationComponent,
+    ChatGroupMembersComponent,
+    GroupMemberComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +43,7 @@ import { ButtonModule } from 'primeng/button';
     BrowserAnimationsModule,
     OverlayPanelModule,
     ButtonModule,
+    SidebarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,56 @@
+@use "../../../../../styles/colors" as colors;
+
+.sidebar-member {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.25rem 0.5rem 0.25rem 1rem;
+  border-radius: 1rem 0 0 1rem;
+
+  * {
+    cursor: default;
+  }
+
+  &:hover {
+    background-color: colors.$primary-color;
+    transition: background-color 0.1s ease-in-out;
+  }
+
+  img {
+    user-drag: none;
+    -webkit-user-drag: none;
+  }
+
+  &__image-placeholder {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: transparent;
+    overflow: hidden;
+
+    > img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  }
+
+  &__name {
+    padding-left: 0.5rem;
+  }
+
+  &__member-status {
+    margin-left: auto;
+  }
+
+  .user-online {
+    width: 0.75rem;
+    height: 0.75rem;
+    position: absolute;
+    background: green;
+    border-radius: 50%;
+    top: 1rem;
+    left: 2rem;
+  }
+}

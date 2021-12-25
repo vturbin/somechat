@@ -1,0 +1,27 @@
+@use "../../../../styles/colors" as colors;
+@use "../../../../styles/variables" as variables;
+
+.members-sidebar {
+  width: 0;
+  height: calc(100% - #{variables.$searchbar-height});
+  background-color: colors.$chat-header;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  transition: width 0.3s ease-in-out;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &.open {
+    width: 15.625rem;
+  }
+}
+
+.sidebar-content {
+  padding: 0.5rem 0;
+
+  &__title {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+  }
+}

@@ -20,6 +20,10 @@
   img {
     user-drag: none;
     -webkit-user-drag: none;
+    &:hover {
+      filter: invert(29%) sepia(7%) saturate(5213%) hue-rotate(174deg)
+        brightness(96%) contrast(85%);
+    }
   }
 
   &__image-placeholder {
@@ -40,4 +44,9 @@
   &__title {
     padding-left: 1rem;
   }
+}
+
+.active-btn {
+  filter: invert(29%) sepia(7%) saturate(5213%) hue-rotate(174deg)
+    brightness(96%) contrast(85%);
 }

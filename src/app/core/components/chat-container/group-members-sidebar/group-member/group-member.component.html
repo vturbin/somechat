@@ -1,0 +1,10 @@
+<div class="sidebar-member">
+  <div class="sidebar-member__image-placeholder">
+    <img src="../../../../../../assets/Intersection 5.png" alt="room-image" />
+  </div>
+  <div [class.user-online]="memberInfo.isOnline"></div>
+  <p class="sidebar-member__name">{{ memberInfo.name }}</p>
+  <p class="sidebar-member__member-status">
+    {{ memberInfo.status === "ADMIN" ? "Admin" : "" }}
+  </p>
+</div>

@@ -5,9 +5,16 @@
     </div>
     <h4 class="summary-block__title">Убийцы ковида</h4>
   </div>
-  <div class="summary-block">
-    <img src="../../../../assets/icon-users.svg" alt="users" />
+  <div class="summary-block" (click)="membersSidebar = !membersSidebar">
+    <img
+      src="../../../../assets/icon-users.svg"
+      alt="users"
+      [class.active-btn]="membersSidebar"
+    />
     <h4 class="summary-block__title">10.5K</h4>
   </div>
 </div>
+<app-chat-group-members
+  [visibleSidebar]="membersSidebar"
+></app-chat-group-members>
  <app-group-information #groupInfoOverlay></app-group-information>

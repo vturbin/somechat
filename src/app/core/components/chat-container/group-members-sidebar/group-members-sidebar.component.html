@@ -1,0 +1,9 @@
+<div class="members-sidebar" [ngClass]="visibleSidebar ? 'open' : ''">
+  <div class="sidebar-content">
+    <h4 class="sidebar-content__title">Members</h4>
+    <app-group-member
+      *ngFor="let member of members"
+      [memberInfo]="member"
+    ></app-group-member>
+  </div>
+</div>
