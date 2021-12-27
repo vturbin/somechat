@@ -4,25 +4,23 @@
   margin: 0.5rem 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .message {
-  padding: 0.5rem 0.25rem;
+  padding: 0.5rem;
   padding-right: 3rem;
   border-radius: 0.5rem;
-  min-width: 10rem;
   max-width: 80%;
   display: inline-block;
   position: relative;
 
   &__addresser {
     color: colors.$text-color;
-    display: block;
   }
 
   &__content {
     word-break: break-word;
-    display: block;
     font-size: 1rem;
   }
 

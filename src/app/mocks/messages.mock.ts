@@ -13,7 +13,7 @@ export const mockMessages: MockMessage[] = [
   {
     message: {
       messageFrom: 'Ебола',
-      messageContent: 'dopjwqpdwdwqopdjwqdojwqdopjwqopdjopwqdjop',
+      messageContent: 'lol',
       timestamp: 1640616380425,
     },
     messageAddresser: MessageAddresser.others,
