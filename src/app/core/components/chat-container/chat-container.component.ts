@@ -7,7 +7,5 @@ import { GroupInformationComponent } from '../group-information/group-informatio
   styleUrls: ['./chat-container.component.scss'],
 })
 export class ChatContainerComponent {
-  @ViewChild('groupInfoOverlay')
-  public groupInfoOverlay: GroupInformationComponent;
-  public membersSidebar = true;
+  public membersSidebar = false;
 }

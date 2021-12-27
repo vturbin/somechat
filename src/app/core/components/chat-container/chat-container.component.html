@@ -1,20 +1,11 @@
-<div id="chat-header">
-  <div class="summary-block" (click)="groupInfoOverlay.toggleOverlay($event)">
-    <div class="summary-block__image-placeholder">
-      <img src="../../../../assets/covid.jpeg" alt="room-image" />
-    </div>
-    <h4 class="summary-block__title">Убийцы ковида</h4>
+<app-chat-header
+  (membersSidebarOpened)="membersSidebar = $event"
+></app-chat-header>
+<div class="chat-area-wrapper">
+  <div class="chat-area">
+    <app-chat-input-box></app-chat-input-box>
   </div>
-  <div class="summary-block" (click)="membersSidebar = !membersSidebar">
-    <img
-      src="../../../../assets/icon-users.svg"
-      alt="users"
-      [class.active-btn]="membersSidebar"
-    />
-    <h4 class="summary-block__title">10.5K</h4>
-  </div>
+  <app-chat-group-members
+    [visibleSidebar]="membersSidebar"
+  ></app-chat-group-members>
 </div>
-<app-chat-group-members
-  [visibleSidebar]="membersSidebar"
-></app-chat-group-members>
- <app-group-information #groupInfoOverlay></app-group-information>

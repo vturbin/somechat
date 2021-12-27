@@ -1,0 +1,18 @@
+.chat-input-box-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 4rem;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  gap: 1rem;
+
+  textarea {
+    max-height: 6rem;
+  }
+
+  .chat-icons {
+    margin-bottom: 2px;
+  }
+}

@@ -1,4 +1,5 @@
 @use "./styles/colors" as colors;
+@use "./styles/variables" as variables;
 @import "./styles/mixins";
 
 #chat-layout {
@@ -9,6 +10,7 @@
 #chat-container {
   flex-grow: 6;
   position: relative;
+  height: calc(#{variables.$roomlist-container-height} - 0.5rem);
   border-radius: 1.5rem;
   min-width: 20rem;
   margin: 1rem 1rem 0rem 1rem;

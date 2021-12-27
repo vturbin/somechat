@@ -19,6 +19,9 @@ import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
 import { ChatGroupMembersComponent } from './core/components/chat-container/group-members-sidebar/group-members-sidebar.component';
 import { GroupMemberComponent } from './core/components/chat-container/group-members-sidebar/group-member/group-member.component';
+import { ChatHeaderComponent } from './core/components/chat-container/chat-header/chat-header.component';
+import { NgxEmojiPickerModule } from 'ngx-emoji-picker';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,7 @@ import { GroupMemberComponent } from './core/components/chat-container/group-mem
     GroupInformationComponent,
     ChatGroupMembersComponent,
     GroupMemberComponent,
+    ChatHeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +48,8 @@ import { GroupMemberComponent } from './core/components/chat-container/group-mem
     OverlayPanelModule,
     ButtonModule,
     SidebarModule,
+    NgxEmojiPickerModule,
+    InputTextareaModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

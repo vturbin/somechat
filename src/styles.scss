@@ -4,6 +4,8 @@
 @import "./app/styles/overlayPanel";
 @import "./app/styles/buttons";
 @import "./app/styles/scrollbar";
+@import "./app/styles/icons";
+@import "./app/styles/textarea";
 
 html,
 body {
@@ -17,4 +19,37 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+emoji-picker {
+  transform: translate(0px, -35px) !important;
+  * {
+    background: colors.$chat-header !important;
+  }
+
+  emoji-content {
+    border-radius: 0.75rem !important;
+  }
+
+  emoji-header {
+    border-bottom: none !important;
+    border-radius: 0.75rem !important;
+  }
+  emoji-footer {
+    border-radius: 0.75rem;
+
+    .emoji-footer {
+      border-top: none !important;
+      border-radius: 0.75rem !important;
+    }
+  }
+
+  .emoji-category {
+    color: colors.$text-color !important;
+  }
+
+  input {
+    color: colors.$text-color;
+    border-radius: 5px;
+  }
 }

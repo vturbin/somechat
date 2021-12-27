@@ -1,3 +1,23 @@
-<p>
-  chat-input-box works!
-</p>
+<div class="chat-input-box-wrapper">
+  <img
+    class="chat-icons"
+    (click)="toggled = !toggled"
+    [(emojiPickerIf)]="toggled"
+    [emojiPickerDirection]="'top'"
+    (emojiPickerSelect)="handleSelection($event)"
+    id="emoji-select-btn"
+    src="../../../../../assets/feather-smile.svg"
+    alt="emoji"
+  />
+  <textarea
+    [rows]="1"
+    [cols]="800"
+    [autoResize]="true"
+    pInputTextarea
+  ></textarea>
+  <img
+    class="chat-icons"
+    src="../../../../../assets/awesome-paper-plane.svg"
+    alt="send"
+  />
+</div>

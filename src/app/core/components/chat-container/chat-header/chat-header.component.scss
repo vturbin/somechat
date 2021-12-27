@@ -1,6 +1,6 @@
-@use "../../../styles/variables" as variables;
-@use "../../../styles/colors" as colors;
-@import "../../../styles/mixins";
+@use "../../../../styles/variables" as variables;
+@use "../../../../styles/colors" as colors;
+@import "../../../../styles/mixins";
 
 #chat-header {
   background: colors.$chat-header;
@@ -18,7 +18,6 @@
   cursor: pointer;
 
   img {
-    user-drag: none;
     -webkit-user-drag: none;
     &:hover {
       filter: invert(29%) sepia(7%) saturate(5213%) hue-rotate(174deg)
@@ -44,23 +43,4 @@
   &__title {
     padding-left: 1rem;
   }
-}
-
-.active-btn {
-  filter: invert(29%) sepia(7%) saturate(5213%) hue-rotate(174deg)
-    brightness(96%) contrast(85%);
-}
-
-.chat-area-wrapper {
-  width: 100%;
-  height: calc(
-    #{variables.$roomlist-container-height} - 0.5rem - #{variables.$searchbar-height}
-  );
-  display: flex;
-  flex-direction: row;
-}
-
-.chat-area {
-  width: 100%;
-  position: relative;
 }
