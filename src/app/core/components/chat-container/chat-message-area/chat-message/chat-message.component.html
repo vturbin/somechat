@@ -1,0 +1,21 @@
+<div class="message-wrapper">
+  <p
+    class="message__addresser"
+    *ngIf="messageAddresser !== messageAddresserEnum.me"
+  >
+    {{ message.messageFrom }}
+  </p>
+  <div
+    class="message"
+    [ngClass]="
+      messageAddresser === messageAddresserEnum.me
+        ? 'message--own'
+        : 'message--others'
+    "
+  >
+    <p class="message__content">
+      {{ message.messageContent }}
+    </p>
+    <span class="message__time">{{ message.timestamp | date: "HH:mm" }}</span>
+  </div>
+</div>

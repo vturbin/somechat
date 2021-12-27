@@ -1,6 +1,4 @@
 .chat-input-box-wrapper {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   min-height: 4rem;
   display: flex;
@@ -10,6 +8,7 @@
 
   textarea {
     max-height: 6rem;
+    flex: 1 1 auto;
   }
 
   .chat-icons {

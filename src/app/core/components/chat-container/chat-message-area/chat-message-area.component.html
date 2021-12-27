@@ -1,0 +1,7 @@
+<div class="message-area">
+  <app-chat-message
+    *ngFor="let mockMessage of mockMessages"
+    [messageAddresser]="mockMessage.messageAddresser"
+    [message]="mockMessage.message"
+  ></app-chat-message>
+</div>
