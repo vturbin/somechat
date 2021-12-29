@@ -8,8 +8,19 @@
   border-radius: 1.5rem;
   background: colors.$primary-color;
   width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
   height: calc(
     #{variables.$roomlist-height} - #{variables.$searchbar-height} - 0.5rem
   );
+  max-width: 25rem;
   @include component-box-shadow;
+}
+
+#room-list-container {
+  height: 95%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
 }

@@ -1,0 +1,18 @@
+<div class="room-container" *ngIf="roomDetails">
+  <div class="room__image">
+    <img src="../../../../../../assets/covid.jpeg" alt="room-image" />
+  </div>
+  <div class="room-details">
+    <span class="room-first-line">
+      <h4 class="room-first-line__title">{{ roomDetails.title }}</h4>
+      <p class="room-first-line__time">
+        {{ roomDetails.lastMessage.timestamp | date: "HH:mm" }}
+      </p>
+    </span>
+    <span class="room-second-line">
+      <p class="room-second-line__last-message">
+        {{ roomDetails.lastMessage.message }}
+      </p>
+    </span>
+  </div>
+</div>

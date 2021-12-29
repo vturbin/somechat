@@ -1,0 +1,58 @@
+@use "../../../../../styles/colors" as colors;
+
+.room-container {
+  display: flex;
+  padding: 0.75rem;
+  border-bottom: 1px solid colors.$secondary-color;
+  user-select: none;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  cursor: default;
+
+  &:hover {
+    background: colors.$background-color;
+  }
+
+  .room {
+    &__image {
+      display: inline-block;
+      flex: 0 0 auto;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      background-color: transparent;
+      overflow: hidden;
+
+      > img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+    }
+  }
+
+  .room-details {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .room-first-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .room-second-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

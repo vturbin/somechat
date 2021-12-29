@@ -6,18 +6,18 @@
 }
 
 /* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 1px 20px colors.$background-color;
-  border-radius: 1rem;
-}
+// ::-webkit-scrollbar-track {
+//   box-shadow: inset 0 1px 20px colors.$background-color;
+//   border-radius: 1rem;
+// }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: colors.$primary-color;
+  background: colors.$scrollbar-color;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: colors.$primary-color-light;
+  background: colors.$scrollbar-color-hover;
 }

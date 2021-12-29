@@ -22,6 +22,7 @@ import { ChatHeaderComponent } from './core/components/chat-container/chat-heade
 import { NgxEmojiPickerModule } from 'ngx-emoji-picker';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ChatMessageAreaComponent } from './core/components/chat-container/chat-message-area/chat-message-area.component';
+import { RoomComponent } from './core/components/room-list-container/room-list/room/room.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ChatMessageAreaComponent } from './core/components/chat-container/chat-
     GroupMemberComponent,
     ChatHeaderComponent,
     ChatMessageAreaComponent,
+    RoomComponent,
   ],
   imports: [
     BrowserModule,

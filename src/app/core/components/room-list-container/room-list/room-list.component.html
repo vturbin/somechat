@@ -1,1 +1,5 @@
-<div id="room-list"></div>
+<div id="room-list">
+  <div id="room-list-container">
+    <app-room *ngFor="let room of roomList" [roomDetails]="room"></app-room>
+  </div>
+</div>
