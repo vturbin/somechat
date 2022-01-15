@@ -4,3 +4,15 @@
   min-width: 20rem;
   flex-grow: 1;
 }
+
+#room-list-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    height: 3rem;
+    width: 3rem;
+  }
+}

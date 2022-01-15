@@ -13,6 +13,10 @@ div {
     border-radius: 0px;
     @include button-mixin;
 
+    &:enabled:hover {
+      background: colors.$btn-hover;
+    }
+
     // &:enabled:hover {
     //   background: colors.$chat-header;
     //   color: colors.$text-color;
@@ -21,6 +25,16 @@ div {
 
     &--critical {
       color: colors.$text-critical;
+    }
+
+    &.p-button-icon-only {
+      .p-button-label {
+        display: none;
+      }
+
+      &.p-button-rounded {
+        border: none;
+      }
     }
   }
 }
