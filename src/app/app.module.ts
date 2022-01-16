@@ -23,6 +23,11 @@ import { NgxEmojiPickerModule } from 'ngx-emoji-picker';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ChatMessageAreaComponent } from './core/components/chat-container/chat-message-area/chat-message-area.component';
 import { RoomComponent } from './core/components/room-list-container/room-list/room/room.component';
+import { DialogModule } from 'primeng/dialog';
+import { NewGroupComponent } from './core/components/new-group/new-group.component';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,18 +45,24 @@ import { RoomComponent } from './core/components/room-list-container/room-list/r
     ChatHeaderComponent,
     ChatMessageAreaComponent,
     RoomComponent,
+    NewGroupComponent,
   ],
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     InputTextModule,
-    BrowserModule,
     BrowserAnimationsModule,
     OverlayPanelModule,
     ButtonModule,
     SidebarModule,
     NgxEmojiPickerModule,
     InputTextareaModule,
+    DialogModule,
+    MultiSelectModule,
+    RadioButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

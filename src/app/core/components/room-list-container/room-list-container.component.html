@@ -7,7 +7,13 @@
       type="button"
       icon="pi pi-plus"
       class="p-button-rounded"
+      (click)="showNewGroupModal = true"
     ></button>
   </div>
   <app-room-list></app-room-list>
 </div>
+
+<app-new-group
+  [showNewGroupModal]="showNewGroupModal"
+  (showNewGroupModalChange)="showNewGroupModal = $event"
+></app-new-group>

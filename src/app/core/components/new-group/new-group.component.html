@@ -1,0 +1,63 @@
+<p-dialog
+  header="New Group"
+  [(visible)]="showNewGroupModal"
+  class="new-group-modal"
+  [modal]="true"
+  (onHide)="closeModal()"
+  [draggable]="false"
+>
+  <div class="p-fluid">
+    <div class="field">
+      <label for="group_name">Group Name</label>
+      <input id="group_name" type="text" pInputText />
+    </div>
+
+    <div class="field">
+      <label for="group_description">What this group is about?</label>
+      <textarea
+        id="group_description"
+        [rows]="5"
+        [cols]="30"
+        [autoResize]="false"
+        pInputTextarea
+      ></textarea>
+    </div>
+  </div>
+  <div class="flex flex-column field">
+    <label for="group_categories">Add categories to the group</label>
+
+    <p-multiSelect
+      id="group_categories"
+      [options]="[]"
+      optionLabel="name"
+    ></p-multiSelect>
+  </div>
+
+  <div class="field">
+    <label for="group_privacy">Group Privacy</label>
+    <div class="p-field-radiobutton">
+      <p-radioButton
+        label="Public"
+        value="public"
+        [ngModel]="groupPrivacy"
+      ></p-radioButton>
+    </div>
+    <div class="p-field-radiobutton">
+      <p-radioButton
+        label="Private"
+        value="private"
+        [ngModel]="groupPrivacy"
+      ></p-radioButton>
+    </div>
+  </div>
+
+  <ng-template pTemplate="footer">
+    <button
+      pButton
+      class="p-button--primary"
+      type="button"
+      label="Next"
+      (click)="closeModal()"
+    ></button>
+  </ng-template>
+</p-dialog>

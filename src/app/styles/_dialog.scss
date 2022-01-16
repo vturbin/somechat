@@ -1,0 +1,23 @@
+@use "./colors" as colors;
+
+div {
+  .p-dialog {
+    border: none;
+    border-radius: 1rem;
+    background: colors.$primary-color;
+
+    .p-dialog-header {
+      border-bottom: none;
+      border-radius: 1rem 1rem 0 0;
+
+      .p-dialog-title {
+        font-size: 1rem;
+      }
+    }
+
+    .p-dialog-footer {
+      border: none;
+      border-radius: 0 0 1rem 1rem;
+    }
+  }
+}

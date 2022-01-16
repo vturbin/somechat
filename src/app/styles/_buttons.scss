@@ -15,6 +15,7 @@ div {
 
     &:enabled:hover {
       background: colors.$btn-hover;
+      color: colors.$text-color;
     }
 
     // &:enabled:hover {
@@ -25,6 +26,10 @@ div {
 
     &--critical {
       color: colors.$text-critical;
+    }
+
+    &--primary {
+      background-color: colors.$chat-header;
     }
 
     &.p-button-icon-only {
