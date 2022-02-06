@@ -28,6 +28,12 @@ import { NewGroupComponent } from './core/components/new-group/new-group.compone
 import { MultiSelectModule } from 'primeng/multiselect';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import filepond module
+import { FilePondModule, registerPlugin } from 'ngx-filepond';
+
+// import and register filepond file type validation plugin
+import * as FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
+registerPlugin(FilePondPluginFileValidateType);
 
 @NgModule({
   declarations: [
@@ -63,6 +69,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DialogModule,
     MultiSelectModule,
     RadioButtonModule,
+    FilePondModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

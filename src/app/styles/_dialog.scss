@@ -5,10 +5,16 @@ div {
     border: none;
     border-radius: 1rem;
     background: colors.$primary-color;
+    width: 50vw;
+    max-width: 500px;
+    max-height: 800px;
+    min-height: 300px;
 
     .p-dialog-header {
       border-bottom: none;
       border-radius: 1rem 1rem 0 0;
+      margin-bottom: -0.1rem;
+      padding-bottom: 0.5rem;
 
       .p-dialog-title {
         font-size: 1rem;
@@ -17,6 +23,7 @@ div {
 
     .p-dialog-footer {
       border: none;
+      margin-top: -0.1rem;
       border-radius: 0 0 1rem 1rem;
     }
   }

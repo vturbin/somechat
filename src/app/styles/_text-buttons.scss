@@ -1,0 +1,10 @@
+@use "./colors" as colors;
+
+.text-button {
+  color: colors.$own-messages;
+
+  &:hover {
+    cursor: pointer;
+    color: colors.$orange-highlighter;
+  }
+}

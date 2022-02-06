@@ -1,0 +1,15 @@
+@use "./colors" as colors;
+
+file-pond {
+  div {
+    &.filepond {
+      &--drop-label {
+        background: colors.$chat-header;
+
+        label {
+          color: colors.$text-color;
+        }
+      }
+    }
+  }
+}

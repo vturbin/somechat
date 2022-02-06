@@ -1,63 +1,126 @@
 <p-dialog
   header="New Group"
   [(visible)]="showNewGroupModal"
-  class="new-group-modal"
   [modal]="true"
   (onHide)="closeModal()"
   [draggable]="false"
 >
-  <div class="p-fluid">
-    <div class="field">
-      <label for="group_name">Group Name</label>
-      <input id="group_name" type="text" pInputText />
-    </div>
+  <form [formGroup]="groupForm" class="p-fluid">
+    <div *ngIf="page === 1">
+      <div class="field">
+        <label for="group_name">Group Name</label>
+        <input formControlName="name" id="group_name" type="text" pInputText />
+      </div>
 
-    <div class="field">
-      <label for="group_description">What this group is about?</label>
-      <textarea
-        id="group_description"
-        [rows]="5"
-        [cols]="30"
-        [autoResize]="false"
-        pInputTextarea
-      ></textarea>
-    </div>
-  </div>
-  <div class="flex flex-column field">
-    <label for="group_categories">Add categories to the group</label>
+      <div class="field">
+        <label for="group_description">What this group is about?</label>
+        <textarea
+          formControlName="description"
+          id="group_description"
+          [rows]="5"
+          [cols]="30"
+          [autoResize]="false"
+          pInputTextarea
+        ></textarea>
+      </div>
 
-    <p-multiSelect
-      id="group_categories"
-      [options]="[]"
-      optionLabel="name"
-    ></p-multiSelect>
-  </div>
+      <div class="flex flex-column field">
+        <label for="group_categories">Add categories to the group</label>
 
-  <div class="field">
-    <label for="group_privacy">Group Privacy</label>
-    <div class="p-field-radiobutton">
-      <p-radioButton
-        label="Public"
-        value="public"
-        [ngModel]="groupPrivacy"
-      ></p-radioButton>
+        <p-multiSelect
+          id="group_categories"
+          [options]="[]"
+          formControlName="categories"
+          optionLabel="name"
+        ></p-multiSelect>
+      </div>
+
+      <div class="field">
+        <label for="group_privacy">Group Privacy</label>
+        <div class="p-field-radiobutton">
+          <p-radioButton
+            formControlName="privacyMode"
+            label="Public"
+            value="public"
+          ></p-radioButton>
+        </div>
+        <div class="p-field-radiobutton">
+          <p-radioButton
+            formControlName="privacyMode"
+            label="Private"
+            value="private"
+          ></p-radioButton>
+        </div>
+      </div>
+      <div *ngIf="groupForm.controls['privacyMode'].value === 'private'">
+        <div class="field">
+          <label for="group_password">Group Password</label>
+          <input
+            formControlName="password"
+            id="group_password"
+            type="password"
+            pInputText
+          />
+        </div>
+        <div class="field">
+          <label for="group_password_2">Verify Password</label>
+          <input
+            formControlName="password2"
+            id="group_password_2"
+            type="password"
+            pInputText
+          />
+        </div>
+      </div>
+      <div formArrayName="socialLinks">
+        <label for="social_links">Social Links</label>
+        <div *ngFor="let h of socialLinks.controls; let i = index">
+          <input
+            formControlName="{{ i }}"
+            id="social_links"
+            type="text"
+            pInputText
+          />
+        </div>
+        <span class="text-button" (click)="addNewLink()">Add more</span>
+      </div>
     </div>
-    <div class="p-field-radiobutton">
-      <p-radioButton
-        label="Private"
-        value="private"
-        [ngModel]="groupPrivacy"
-      ></p-radioButton>
+    <div *ngIf="page === 2">
+      <file-pond
+        #myPond
+        [options]="pondOptions"
+        (oninit)="pondHandleInit()"
+        (onaddfile)="pondHandleAddFile($event)"
+        (onactivatefile)="pondHandleActivateFile($event)"
+      >
+      </file-pond>
     </div>
-  </div>
+  </form>
 
   <ng-template pTemplate="footer">
     <button
+      *ngIf="page > 1"
       pButton
-      class="p-button--primary"
+      class="p-button p-button--primary"
+      type="button"
+      label="Back"
+      (click)="showPreviousPage()"
+    ></button>
+    <button
+      *ngIf="page === 1"
+      pButton
+      class="p-button p-button--primary"
       type="button"
       label="Next"
-      (click)="closeModal()"
+      (click)="showNextPage()"
+    ></button>
+    <button
+      *ngIf="page === 2"
+      pButton
+      class="p-button p-button--primary"
+      type="button"
+      label="Create"
+      (click)="createGroup()"
     ></button>
   </ng-template>
 </p-dialog>
