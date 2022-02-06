@@ -51,6 +51,7 @@ export class NewGroupComponent implements OnInit {
   public closeModal(): void {
     this.page = 1;
     this.showNewGroupModal = false;
+    this.resetFormToDefault();
     this.showNewGroupModalChange.emit(this.showNewGroupModal);
   }
 
@@ -72,5 +73,16 @@ export class NewGroupComponent implements OnInit {
 
   public pondHandleActivateFile(event: any) {
     console.log('A file was activated', event);
+  }
+
+  private resetFormToDefault(): void {
+    this.groupForm.reset();
+    this.groupForm.patchValue({
+      privacyMode: 'public',
+    });
+    while (this.socialLinks.length > 1) {
+      this.socialLinks.removeAt(0);
+    }
+    this.socialLinks.reset();
   }
 }

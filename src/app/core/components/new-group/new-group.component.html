@@ -84,6 +84,18 @@
         </div>
         <span class="text-button" (click)="addNewLink()">Add more</span>
       </div>
+      <div class="field">
+        <label for="groupLink">Group URL</label>
+        <div class="flex align-items-center">
+          <span class="col-6 p-0">https://site-domain.com/</span
+          ><input
+            formControlName="groupLink"
+            id="groupLink"
+            type="text"
+            pInputText
+          />
+        </div>
+      </div>
     </div>
     <div *ngIf="page === 2">
       <file-pond
